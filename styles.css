@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
+
+/* Init */
+:root {
+  /* Font */
+  --main-font: "Sora", sans-serif;
+  --heading-font-size: 36px;
+  --body-font-size: 20px;
+  --body2-font-size: 16px;
+  --list-item-font-size: 14px;
+
+  /* Color */
+  --main-bg-color: #fafaf9;
+
+  --review-bg-color: #ffffff;
+  --h-color: #18181b;
+  --border-color: #f2f5f9;
+
+  --star-bg-color: #f5c044;
+  --body-text-color: #52525a;
+  --body2-text-color: #52525a;
+  --list-item-color: #52525a;
+
+  /* Border */
+  --card-border-radius: 15px;
+
+  /* Custom */
+  --card-bg-color: #ffffff;
+}
+
+/* Set default */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--heading-font-size);
+
+  font-weight: 500;
+}
+
+h4 {
+  font-weight: 500;
+}
+
+p {
+  margin: 0;
+}
+
+ul,
+li {
+  font-size: var(--list-item-font-size);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-weight: 300;
+  margin-bottom: 12px;
+}
+
+li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+li > img {
+  margin-right: 8px;
+}
+
+body {
+  background: var(--main-bg-color);
+  font-family: var(--main-font);
+
+  height: 100vh;
+
+  margin: 0;
+  padding: 0;
+}
+
+/* Main */
+main {
+  display: flex;
+  flex-direction: row;
+  margin-top: 162px;
+  margin-left: 75px;
+  margin-right: 75px;
+
+}
+
+.body-left,
+.body-right {
+  flex: 1;
+}
+
+/* Body left  */
+.body-left > .star {
+  background: var(--star-bg-color);
+  border: solid 1px var(--border-color);
+
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  margin-bottom: 16px;
+}
+
+.body-left > h1 {
+  margin-bottom: 12px;
+}
+
+.body-left > p {
+  font-size: var(--body-font-size);
+  color: var(--body-text-color);
+  font-weight: 300;
+  margin-bottom: 32px;
+}
+
+/* Body right */
+.body-right {
+  display: flex;
+  flex-direction: column;
+  padding-left: 35px;
+}
+
+.body-right > section {
+  background: var(--card-bg-color);
+  border: solid 1px var(--border-color);
+  border-radius: var(--card-border-radius);
+
+  max-width: 360px;
+  padding: 39px 27px 39px 27px;
+}
+
+.body-right > section:nth-child(odd) {
+  align-self: flex-end;
+  margin-bottom: 40px;
+}
+
+.body-right > section:nth-child(even) {
+  align-self: flex-start;
+}
+
+.body-right > section > div {
+  display: flex;
+  align-items: center;
+}
+
+.body-right > section .logo {
+  width: 90px;
+  margin-right: 20px;
+}
+
+.body-right h4 {
+  margin-top: 16px;
+}
+
+.body-right p {
+  color: var(--body2-text-color);
+  font-size: var(--body2-font-size);
+
+  margin-top: 8px;
+  font-weight: 200;
+}
+
+@media only screen and (max-width: 640px) {
+  main {
+    flex-direction: column;
+    margin-top: 95px;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+
+  .body-right {
+    margin-top: 75px;
+    padding-left: 0;
+  }
+}
